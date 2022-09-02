@@ -223,7 +223,7 @@ function getUserById(array, id) {
 
 // функция принимает массив и возвращает новый массив в котором у всех пользователей пропадет поле address
 function removeAddresses(array) {
-  return (withoutAddreses = array.filter(function (item) {
+  return (withoutAddreses = array.map(function (item) {
     delete item.address;
     return item;
   }));
